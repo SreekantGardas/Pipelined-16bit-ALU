@@ -1,0 +1,6 @@
+Time resolution is 1 ps
+Answer: 11
+Answer: 1
+Answer: 2
+Answer: 2
+$finish called at time : 40 ns : File "C:/Users/nishe/SreeProjects/Pipelined 16bit ALU/Pipelined 16bit ALU.srcs/sim_1/new/alu_tb.sv" Line 35
