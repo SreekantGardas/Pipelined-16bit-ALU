@@ -1,0 +1,1 @@
+--incr --debug "typical" --relax --mt "2" --include "C:/AMDDesignTools/2025.2/Vivado/tps/boost_1_72_0" -L "xil_defaultlib" -L "uvm" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -sv_root "." -sc_lib "libdpi.dll" --snapshot "testcases_tb_behav" "xil_defaultlib.testcases_tb" "xil_defaultlib.glbl" -log "elaborate.log" 

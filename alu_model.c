@@ -1,3 +1,4 @@
+#include <stdint.h>
 void alu_model(uint8_t opcode, uint16_t A, uint16_t B, uint16_t* outfinal, uint8_t* neg, uint8_t* zero){
     
     *neg = 0;

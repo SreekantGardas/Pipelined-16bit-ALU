@@ -1,0 +1,6 @@
+Multi-threading is on. Using 14 slave threads.
+
+Linking with command:
+C:\AMDDesignTools\2025.2\Vivado\data\..\tps\mingw\6.2.0\win64.o\nt\bin\g++.exe -Wa,-W  -DNT  -O -shared  -Wl,--stack,104857600 -o "libdpi.dll" xsim.dir/xil_defaultlib\xsc\*.obj     -LC:\AMDDesignTools\2025.2\Vivado\lib\win64.o -lxv_simulator_kernel  -lxv_xsim_systemc 
+
+Done linking: "libdpi.dll"
