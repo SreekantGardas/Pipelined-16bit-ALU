@@ -15,7 +15,7 @@ output logic stall
 
 logic[2:0] op1;
 logic[15:0] A1, B1;
-logic[3:0] dest1, srcA1, srcB1;
+logic[3:0] dest1;
 
 always_ff@(posedge clk or posedge areset) begin
     if(areset) begin
@@ -27,6 +27,7 @@ always_ff@(posedge clk or posedge areset) begin
         op1 <= 0;
         A1 <= 0;
         B1 <= 0;
+        dest1 <= 0;
     end else begin
         dest1 <= Dest_Reg;
         op1 <= opcode;
