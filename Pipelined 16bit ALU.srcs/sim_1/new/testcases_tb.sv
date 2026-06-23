@@ -38,8 +38,21 @@ alu test(
 always #5 clk = ~clk;
 int errors = 0;
 
+covergroup cg @(posedge clk);
+    track_opcode: coverpoint opcode{
+        bins track_add = {3'b000};
+        bins track_sub = {3'b001};
+        bins track_and = {3'b010};
+        bins track_or = {3'b011};
+        bins track_xor = {3'b100};
+        bins track_ls = {3'b101};
+        bins track_rs = {3'b110};
+        bins track_equal = {3'b111};
+    }
+endgroup
 
 initial begin
+    cg inst = new();
     clk = 0;
     areset = 1;
     opcode = 0;
@@ -82,7 +95,23 @@ initial begin
     end else begin
         $display("You failed %0d testcases", errors);
     end
+    
+    $display("Functional Coverage: %0.2f%%", inst.get_inst_coverage());
     $display("-----------End-----------");
     $finish;
 end
+
+assert property (@(posedge clk) areset |=> (outfinal == 0));
+
+assert property(@(posedge clk) (Src_Reg_A == test.dest1) && (Src_Reg_A != 0)|-> (stall == 1));
+assert property(@(posedge clk) (Src_Reg_A == test.dest2) && (Src_Reg_A != 0)|-> (stall == 1));
+assert property(@(posedge clk) (Src_Reg_B == test.dest1) && (Src_Reg_B != 0)|-> (stall == 1));
+assert property(@(posedge clk) (Src_Reg_B == test.dest2) && (Src_Reg_B != 0)|-> (stall == 1));
+
+assert property(@(posedge clk) (stall == 1) |=> (test.dest1 == 0) && (test.op1 == 0) && (test.A1 == 0) && (test.B1 == 0));
+
+assert property(@(posedge clk) (outfinal[15] == 1) |-> (neg != 0));
+assert property(@(posedge clk) (outfinal == 0) |-> (zero != 0));
+
+
 endmodule
