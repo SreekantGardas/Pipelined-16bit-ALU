@@ -1,16 +1,14 @@
-# Vivado / FPGA build files
-.sim/
-.runs/
-.gen/
-.cache/
-.hw/
-.ip_user_files/
+*.cache/
+*.runs/
+*.sim/
+*.gen/
+*.hw/
+*.ip_user_files/
 *.log
 *.jou
 *.str
 *.backup
-
-# Python / Environment files
+*.xpr
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
