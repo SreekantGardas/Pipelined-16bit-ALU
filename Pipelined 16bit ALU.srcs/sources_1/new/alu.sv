@@ -58,6 +58,9 @@ always_ff@(posedge clk or posedge areset) begin
     if(areset) begin
         dest2 <= 0;
         out2 <= 0;
+    end else if(stall) begin
+        dest2 <= 0;
+        out2 <= 0;
     end else begin
         dest2 <= dest1; 
         out2 <= out1;
