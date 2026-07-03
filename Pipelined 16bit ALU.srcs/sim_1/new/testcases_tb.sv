@@ -53,6 +53,8 @@ endgroup
 
 initial begin
     cg inst = new();
+    $dumpfile("alu_waves.vcd");
+    $dumpvars(0, testcases_tb);
     clk = 0;
     areset = 1;
     opcode = 0;
