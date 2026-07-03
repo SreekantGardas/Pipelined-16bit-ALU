@@ -16,5 +16,5 @@ plt.legend(loc='upper right')
 plt.grid(True, which='both', linestyle='--', alpha=0.7)
 
 plt.tight_layout()
-plt.savefig('pipeline_plot.png', dpi=300) # Saves as a high-quality image for your report
+plt.savefig('pipeline_plot.png', dpi=300)
 plt.show()
