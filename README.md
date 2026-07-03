@@ -14,17 +14,17 @@ This repository features a cycle-accurate, **16-bit Pipelined Arithmetic Logic U
 ## Pipelined Execution Waveforms
 The waveform capture below validates the ALU's behavioral model, specifically demonstrating the cycle-accurate transition of the `opcode`, source operands (`A[15:0]`, `B[15:0]`), and the resulting `outfinal` register output.
 
-![ALU Execution Waveforms](image_3dd739.png)
+![ALU Execution Waveforms](image1.png)
 
 ## Hazard Mitigation Logic
 To prevent invalid data propagation, the design incorporates a centralized Hazard Detection Unit. This capture details the `stall` signal assertion, demonstrating active management of pipeline registers (`dest1`, `dest2`, `Src_Reg_A`, `Src_Reg_B`) when data dependencies are detected.
 
-![Hazard Stall Logic](image_3dd73f.png)
+![Hazard Stall Logic](image2.png)
 
 ## Hazard Analysis & Pipeline Throughput
 I implemented a performance characterization script using Python to visualize the relationship between signal magnitude and pipeline stalls. This plot identifies "pipeline bubbles," providing a quantitative basis for further architectural optimization.
 
-![Hazard Analysis Plot](image_3dd73f.png)
+![Hazard Analysis Plot](image3.png)
 
 ## Technical Stack
 *   **Hardware Description:** Verilog/SystemVerilog
