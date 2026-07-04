@@ -31,3 +31,8 @@ I implemented a performance characterization script using Python to visualize th
 *   **Verification:** C-based Golden Models, DPI-C Interface
 *   **Simulation & Synthesis:** Vivado/XSim
 *   **Data Analysis:** Python (Matplotlib/Pandas) for pipeline metrics
+
+## Hardware Demonstration
+Click below to watch a live demo of the Pipelined ALU on the Basys 3 board, where I demonstrate opcode selection and arithmetic operations:
+
+[![Watch the Demo](https://img.youtube.com/vi/NQnf-IdNnBc/0.jpg)](https://youtube.com/shorts/NQnf-IdNnBc)
