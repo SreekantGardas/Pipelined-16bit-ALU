@@ -6,7 +6,7 @@ This repository features a cycle-accurate, **16-bit Pipelined Arithmetic Logic U
 ## Technical Specifications
 *   **Pipeline Architecture:** Multi-stage instruction execution to maximize **Instruction Level Parallelism (ILP)** and throughput.
 *   **Hazard Detection Unit:** Implements deterministic logic to monitor for **Data Hazards** (RAW/WAR/WAW) and structural conflicts, triggering stalls to ensure data integrity.
-*   **RTL Design:** Developed using **Verilog** with a focus on synthesizable, low-latency logic paths.
+*   **RTL Design:** Developed using **SystemVerilog** with a focus on synthesizable, low-latency logic paths.
 *   **Verification Framework:** Utilizes **DPI-C (Direct Programming Interface)** to interface Verilog simulation with C-based Golden Models, ensuring bit-perfect validation of complex ALU arithmetic.
 
 ## Design Verification & Performance Analysis
